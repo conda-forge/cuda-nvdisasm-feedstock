@@ -20,7 +20,7 @@ source:
   sha256: 62a15a4ef3c0641352d7e5c184243d20f9e4992f040538c0f14cd40ec7e5ef7b  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx]
   script:
     - cp -rv bin $PREFIX        # [linux]
