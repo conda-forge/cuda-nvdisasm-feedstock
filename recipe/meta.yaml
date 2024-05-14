@@ -20,7 +20,7 @@ source:
   sha256: 62a15a4ef3c0641352d7e5c184243d20f9e4992f040538c0f14cd40ec7e5ef7b  # [win]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
   script:
     - cp -rv bin $PREFIX        # [linux]
@@ -30,6 +30,7 @@ requirements:
   build:
     - {{ compiler("c") }}
     - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
     - arm-variant * {{ arm_variant_type }}  # [aarch64]
   host:
     - cuda-version {{ cuda_version }}
