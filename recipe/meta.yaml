@@ -1,6 +1,7 @@
 {% set name = "cuda-nvdisasm" %}
 {% set version = "12.6.20" %}
 {% set cuda_version = "12.6" %}
+{% set platform = "" %}  # [osx]
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
