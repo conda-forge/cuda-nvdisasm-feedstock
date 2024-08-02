@@ -1,6 +1,6 @@
 {% set name = "cuda-nvdisasm" %}
-{% set version = "12.5.39" %}
-{% set cuda_version = "12.5" %}
+{% set version = "12.6.20" %}
+{% set cuda_version = "12.6" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -14,9 +14,9 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvdisasm/{{ platform }}/cuda_nvdisasm-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: fa775b95352302585732644bdd3254a210ccbe477fe5ab85f81956299ca40909  # [linux64]
-  sha256: b6a2a8f74cb4ccf5f489308b95568e24917fd384471f0e41235d2a48c2d71729  # [aarch64]
-  sha256: 2b378494913d9e86c9f6210c2e5389df2fe9de1be1b1dd4a229b86f2bca0cd98  # [win]
+  sha256: ba60cc8c9cfabb399b70aa49ee3428f7c489330b0aa7c8616121651e56dacc3e  # [linux64]
+  sha256: 7ed318e59165e4d838df65618042b139f7743b80c22f3f28764287732503f52b  # [aarch64]
+  sha256: 9ac787efbcd20c4c871038ee5ca1c0757139990b25ea90d368aa9c1759952be6  # [win]
 
 build:
   number: 0
