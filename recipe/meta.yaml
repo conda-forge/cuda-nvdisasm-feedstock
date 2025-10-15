@@ -3,8 +3,11 @@
 {% set cuda_version = "12.9" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
-{% set platform = "linux-sbsa" %}  # [aarch64]
+{% set platform = "linux-sbsa" %}  # [aarch64 and arm_variant_type=="sbsa"]
+{% set platform = "linux-aarch64" %}  # [aarch64 and arm_variant_type=="tegra"]
 {% set platform = "windows-x86_64" %}  # [win]
+{% set target_name = "sbsa-linux" %}  # [aarch64 and arm_variant_type=="sbsa"]
+{% set target_name = "aarch64-linux" %}  # [aarch64 and arm_variant_type=="tegra"]
 {% set extension = "tar.xz" %}  # [not win]
 {% set extension = "zip" %}  # [win]
 
@@ -15,11 +18,12 @@ package:
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvdisasm/{{ platform }}/cuda_nvdisasm-{{ platform }}-{{ version }}-archive.{{ extension }}
   sha256: 49296dd550e05434185a8588ec639f1325b2de413e2321ddd7e56c5182a476ff  # [linux64]
-  sha256: 28b2597f0901cfafcd050cba0877c1eb5edcd7ebd8164aea356cec832e636ee3  # [aarch64]
+  sha256: 28b2597f0901cfafcd050cba0877c1eb5edcd7ebd8164aea356cec832e636ee3  # [aarch64 and arm_variant_type=="sbsa"]
+  sha256: 99bf70149423c42c8dc2649f76f8983101dcf9879d355cfb2582b2adbed84614  # [aarch64 and arm_variant_type=="tegra"]
   sha256: 955ba1f52f7115031f10408ce3cec4c745df41dba8fdf6024c3983d899e9fbbc  # [win]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: false
   skip: true  # [osx or ppc64le]
   script:
@@ -36,7 +40,6 @@ requirements:
     - cuda-version {{ cuda_version }}
   run:
     - {{ pin_compatible("cuda-version", max_pin="x.x") }}
-  run_constrained:
     - arm-variant * {{ arm_variant_type }}  # [aarch64]
 
 test:
