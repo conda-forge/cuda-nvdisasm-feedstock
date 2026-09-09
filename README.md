@@ -1,7 +1,7 @@
 About cuda-nvdisasm-feedstock
 =============================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cuda-nvdisasm-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nvd-feedstock/blob/main/LICENSE.txt)
 
 Home: https://developer.nvidia.com/cuda-toolkit
 
@@ -22,34 +22,9 @@ Current build status
 <table><tr>
     <td>GitHub Actions</td>
     <td>
-      <a href="https://github.com/conda-forge/cuda-nvdisasm-feedstock/actions/workflows/conda-build.yml">
-        <img src="https://github.com/conda-forge/cuda-nvdisasm-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      <a href="https://github.com/conda-forge/nvd-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/nvd-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
-    </td>
-  </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19546&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cuda-nvdisasm-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cuda-nvdisasm-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
     </td>
   </tr>
 </table>
