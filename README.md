@@ -27,31 +27,6 @@ Current build status
       </a>
     </td>
   </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19546&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cuda-nvdisasm-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=19546&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cuda-nvdisasm-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
@@ -71,31 +46,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cuda-nvdisasm` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install cuda-nvdisasm
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install cuda-nvdisasm
 ```
 
-It is possible to list all of the versions of `cuda-nvdisasm` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add cuda-nvdisasm
+# for installing globally
+pixi global install cuda-nvdisasm
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `cuda-nvdisasm` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search cuda-nvdisasm --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search cuda-nvdisasm --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search cuda-nvdisasm --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -107,6 +124,8 @@ mamba repoquery whoneeds cuda-nvdisasm --channel conda-forge
 # List dependencies of `cuda-nvdisasm`:
 mamba repoquery depends cuda-nvdisasm --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
