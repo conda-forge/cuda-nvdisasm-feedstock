@@ -1,6 +1,6 @@
 {% set name = "cuda-nvdisasm" %}
-{% set version = "13.4.92" %}
-{% set cuda_version = "13.4" %}
+{% set version = "13.5.37" %}
+{% set cuda_version = "13.5" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-ppc64le" %}  # [ppc64le]
 {% set platform = "linux-sbsa" %}  # [aarch64]
@@ -8,10 +8,10 @@
 {% set platform = "windows-arm64" %}  # [win and arm64]
 {% set extension = "tar.xz" %}  # [not win]
 {% set extension = "zip" %}  # [win]
-{% set sha256 = "d0af2b49c3ba6b4f64f3e284e0229d234aa88beeba8e033a8a4fe5db7c4cc3b6" %}  # [linux64]
-{% set sha256 = "7959183e0ac67c6089fddc9e5e6c0104f68c7ed66d3d9707b5816ac800d5ea1c" %}  # [aarch64]
-{% set sha256 = "42a08d81ea1b70ff5f75914733ccfd236d7be01b8df8e408c894d57f11bf68fa" %}  # [win64]
-{% set sha256 = "4d37163666b114c9a2d118314da2a5e977ae0cc4edb555c96675f0a2e1573e4f" %}  # [win and arm64]
+{% set sha256 = "6af64b980dcd571657350949f0843e7f851b32e7294e1c3f1acc294ad327ee6e" %}  # [linux64]
+{% set sha256 = "db2e69a677a0008932c3d59109b47534cb69076a980d388474bd2ef2906369cf" %}  # [aarch64]
+{% set sha256 = "8cc7edd8219882d46eabbd6a686fdf7487fbb9faab4b79398051699ff88fa137" %}  # [win64]
+{% set sha256 = "e0a77929a083702ddadcbff781914614fb33928f62161d17a17f1375b2d4518c" %}  # [win and arm64]
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   binary_relocation: false
   skip: true  # [osx or ppc64le]
   script:
