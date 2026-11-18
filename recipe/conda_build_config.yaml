@@ -3,5 +3,5 @@ arm_variant_type: # [aarch64]
 c_stdlib:
   - sysroot        # [linux]
   - vs             # [win]
-c_stdlib_version:  # [linux]
-  - '2.28'         # [linux]
+c_stdlib_version:  # [linux and not riscv64]
+  - '2.28'         # [linux and not riscv64]
